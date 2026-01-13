@@ -1,0 +1,153 @@
+/Users/andrespena/Desktop/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:265: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df[f"{col}_MA200"] = df[col].rolling(config["ma_long"]).mean()
+/Users/andrespena/Desktop/Macro Rotations/analytics/macro_models.py:301: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df["MACRO_SCORE"] = score_series / valid_count
+/Users/andrespena/Desktop/Macro Rotations/analytics/quant.py:542: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  daily_rets = s.pct_change().dropna()
+/Users/andrespena/Desktop/Macro Rotations/plotting/charts.py:33: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  rets = series.pct_change().dropna()
+/Users/andrespena/Desktop/Macro Rotations/analytics/quant.py:542: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  daily_rets = s.pct_change().dropna()
+/Users/andrespena/Desktop/Macro Rotations/analytics/quant.py:542: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  daily_rets = s.pct_change().dropna()
+/Users/andrespena/Desktop/Macro Rotations/plotting/report.py:406: UserWarning: Glyph 9989 (\N{WHITE HEAVY CHECK MARK}) missing from font(s) DejaVu Sans Mono.
+  pdf.savefig(fig_text)
+/Users/andrespena/Desktop/Macro Rotations/plotting/report.py:406: UserWarning: Glyph 65039 (\N{VARIATION SELECTOR-16}) missing from font(s) DejaVu Sans Mono.
+  pdf.savefig(fig_text)
+--- Initializing SUPER MACRO DASHBOARD (Modular) ---
+   Loading data from local cache...
+Running Analytics Pipeline...
+
+--- DEBUG: Final CPI_YoY Series Tail in macro_models ---
+Date
+2025-11-27    0.030227
+2025-11-28    0.030227
+2025-11-29    0.030227
+2025-11-30    0.030227
+2025-12-01    0.030227
+2025-12-02    0.030227
+2025-12-03    0.030227
+2025-12-04    0.030227
+2025-12-05    0.030227
+2025-12-06    0.030227
+Freq: D, Name: CPI_YoY, dtype: float64
+------------------------------------------------------
+
+Generating Visualizations...
+   Running Backtest & Projections...
+   Generating Risk & Macro Page...
+   Generating Monetary Plumbing Page...
+   Generating Macro Radar...
+   Generating Forward Models Page...
+   Running GMM Regime Detection...
+   Calculating Sector Rotation Probabilities...
+   Calculating Systemic Risk (PCA)...
+   Calculating Seasonality...
+   Generating Quant Lab Page...
+Generating PDF Report: Macro_Dashboard_Report.pdf...
+PDF Report Saved Successfully!
+Done!
