@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBKR Greeks Terminal</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --panel-bg: #161b22;
+            --text-color: #c9d1d9;
+            --accent-green: #238636;
+            --accent-red: #da3633;
+            --accent-cyan: #3fb950;
+            --border-color: #30363d;
+            --font-mono: 'Menlo', 'Monaco', 'Courier New', monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-mono);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .status {
+            font-size: 0.8em;
+            color: #8b949e;
+        }
+
+        .status.connected { color: var(--accent-green); }
+
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        .panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 { margin-top: 0; font-size: 1em; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; color: #58a6ff; }
+
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-size: 0.8em; color: #8b949e; margin-bottom: 5px; }
+        input, select {
+            width: 100%;
+            background: #0d1117;
+            border: 1px solid var(--border-color);
+            color: white;
+            padding: 8px;
+            font-family: inherit;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            background: #238636;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: inherit;
+            font-weight: bold;
+        }
+        button:hover { background: #2ea043; }
+        button:disabled { background: #30363d; cursor: not-allowed; }
+
+        .greeks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .greek-card {
+            background: #0d1117;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .greek-card .label { font-size: 0.8em; color: #8b949e; display: block; margin-bottom: 5px; }
+        .greek-card .value { font-size: 1.5em; font-weight: bold; color: var(--text-color); }
+        .greek-card .value.green { color: var(--accent-cyan); }
+        .greek-card .value.red { color: var(--accent-red); }
+
+        #log {
+            font-size: 0.8em;
+            color: #8b949e;
+            overflow-y: auto;
+            max-height: 200px;
+            margin-top: auto;
+            border-top: 1px solid var(--border-color);
+            padding-top: 10px;
+        }
+        
+        /* Loading animation */
+        @keyframes blink { 50% { opacity: 0; } }
+        .blinking { animation: blink 1s step-end infinite; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>IBKR GREEKS TERMINAL <span class="blinking">_</span></h1>
+        <div id="connection-status" class="status">DISCONNECTED</div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar Controls -->
+        <div class="panel">
+            <h2>MARKET SELECTOR</h2>
+            
+            <div class="form-group">
+                <label>TICKER</label>
+                <div style="display:flex; gap:5px;">
+                    <input type="text" id="ticker" value="SPY" placeholder="SPY">
+                    <button id="btn-load" style="width:auto">GO</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>EXPIRY</label>
+                <select id="expiry" disabled><option>Load Ticker First</option></select>
+            </div>
+
+            <div class="form-group">
+                <label>STRIKE</label>
+                <select id="strike" disabled><option>-</option></select>
+            </div>
+
+            <div class="form-group">
+                <label>RIGHT</label>
+                <select id="right">
+                    <option value="C">CALL</option>
+                    <option value="P">PUT</option>
+                </select>
+            </div>
+
+            <button id="btn-monitor" disabled>START MONITORING</button>
+            <button id="btn-stop" style="background:#da3633; margin-top:10px; display:none;">STOP</button>
+
+            <div id="log">System Ready...</div>
+        </div>
+
+        <!-- Main Display -->
+        <div class="panel">
+            <h2>LIVE GREEKS MONITOR</h2>
+            
+            <div style="display:flex; justify-content:space-between; margin-bottom:20px; border-bottom:1px solid #30363d; padding-bottom:10px;">
+                <span>CONTRACT: <b id="display-contract">-</b></span>
+                <span>PRICE: <b id="display-price">-</b></span>
+                <span>IV: <b id="display-iv" style="color:#a371f7">-</b></span>
+            </div>
+
+            <div class="greeks-grid">
+                <div class="greek-card">
+                    <span class="label">DELTA</span>
+                    <span class="value" id="val-delta">-</span>
+                </div>
+                <div class="greek-card">
+                    <span class="label">GAMMA</span>
+                    <span class="value" id="val-gamma">-</span>
+                </div>
+                <div class="greek-card">
+                    <span class="label">THETA</span>
+                    <span class="value" id="val-theta">-</span>
+                </div>
+                <div class="greek-card">
+                    <span class="label">VEGA</span>
+                    <span class="value" id="val-vega">-</span>
+                </div>
+            </div>
+            
+            <div style="margin-top:20px; padding:15px; background:#21262d; border-radius:4px;">
+                <label>UPDATE FREQUENCY</label>
+                <div style="width:100%; height:4px; background:#30363d; margin-top:5px; position:relative;">
+                    <div id="progress-bar" style="width:0%; height:100%; background:#238636; transition: width 0.5s;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const log = (msg) => {
+            const el = document.getElementById('log');
+            el.innerHTML += `<div>> ${msg}</div>`;
+            el.scrollTop = el.scrollHeight;
+        };
+
+        // State
+        let monitorInterval = null;
+
+        // Init
+        window.addEventListener('load', async () => {
+            try {
+                const res = await fetch('/api/connect');
+                const data = await res.json();
+                const statusEl = document.getElementById('connection-status');
+                if(data.connected) {
+                    statusEl.innerText = "CONNECTED";
+                    statusEl.classList.add('connected');
+                    log("Connected to IBKR Gateway.");
+                } else {
+                    log("Connection Failed. Ensure IBKR is running.");
+                }
+            } catch(e) {
+                log("Backend Error. Is Uvicorn running?");
+            }
+        });
+
+        // Load Ticker
+        document.getElementById('btn-load').addEventListener('click', async () => {
+             const ticker = document.getElementById('ticker').value;
+             log(`Searching chains for ${ticker}...`);
+             
+             const res = await fetch(`/api/chain/${ticker}`);
+             const data = await res.json();
+             
+             if(data.error) {
+                 log(`Error: ${data.error}`);
+                 return;
+             }
+             
+             // Populate Expiry
+             const expirySel = document.getElementById('expiry');
+             expirySel.innerHTML = '';
+             data.expirations.forEach(e => {
+                 const opt = document.createElement('option');
+                 opt.value = e;
+                 opt.text = e;
+                 if(e === data.recommended_expiry) opt.selected = true;
+                 expirySel.appendChild(opt);
+             });
+             expirySel.disabled = false;
+             
+             log(`Loaded Expirations. Default: ${data.recommended_expiry}`);
+             loadStrikes(ticker, expirySel.value);
+        });
+        
+        document.getElementById('expiry').addEventListener('change', () => {
+            loadStrikes(document.getElementById('ticker').value, document.getElementById('expiry').value);
+        });
+
+        async function loadStrikes(ticker, expiry) {
+            log(`Fetching valid strikes for ${expiry}...`);
+            const res = await fetch(`/api/contracts/${ticker}/${expiry}`);
+            const data = await res.json();
+            
+            const strikeSel = document.getElementById('strike');
+            strikeSel.innerHTML = '';
+            
+            if(data.strikes) {
+                // Find ATM logic simple
+               data.strikes.forEach(s => {
+                    const opt = document.createElement('option');
+                    opt.value = s;
+                    opt.text = s;
+                    strikeSel.appendChild(opt);
+                });
+                
+                // Select middle
+                strikeSel.options[Math.floor(data.strikes.length/2)].selected = true;
+                strikeSel.disabled = false;
+                document.getElementById('btn-monitor').disabled = false;
+                log(`Loaded ${data.strikes.length} strikes.`);
+            }
+        }
+
+        // Monitoring
+        document.getElementById('btn-monitor').addEventListener('click', () => {
+            const symbol = document.getElementById('ticker').value;
+            const expiry = document.getElementById('expiry').value;
+            const strike = document.getElementById('strike').value;
+            const right = document.getElementById('right').value;
+            
+            document.getElementById('display-contract').innerText = `${symbol} ${expiry} ${right}${strike}`;
+            document.getElementById('btn-monitor').style.display = 'none';
+            document.getElementById('btn-stop').style.display = 'block';
+            
+            log("Started Monitoring...");
+            
+            monitorInterval = setInterval(async () => {
+                document.getElementById('progress-bar').style.width = '100%';
+                setTimeout(() => document.getElementById('progress-bar').style.width = '0%', 500);
+                
+                const res = await fetch('/api/greeks/snapshot', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ symbol, expiry, strike, right })
+                });
+                const data = await res.json();
+                
+                if(data.error) {
+                    log(data.error);
+                } else {
+                    document.getElementById('display-price').innerText = data.price.toFixed(2);
+                    document.getElementById('display-iv').innerText = (data.iv * 100).toFixed(1) + "%";
+                    
+                    updateVal('val-delta', data.delta, 3);
+                    updateVal('val-gamma', data.gamma, 3);
+                    updateVal('val-theta', data.theta, 3);
+                    updateVal('val-vega', data.vega, 3);
+                }
+            }, 2000);
+        });
+        
+        document.getElementById('btn-stop').addEventListener('click', () => {
+            clearInterval(monitorInterval);
+            document.getElementById('btn-monitor').style.display = 'block';
+            document.getElementById('btn-stop').style.display = 'none';
+            log("Monitoring Stopped.");
+        });
+        
+        function updateVal(id, val, prec) {
+            const el = document.getElementById(id);
+            el.innerText = val ? val.toFixed(prec) : '-';
+            el.className = 'value'; // reset
+            if(val > 0) el.classList.add('green');
+            if(val < 0) el.classList.add('red');
+        }
+
+    </script>
+</body>
+</html>
