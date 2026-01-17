@@ -102,4 +102,25 @@ class IBService:
             'updated': datetime.now().isoformat()
         }
 
+    async def get_historical_data(self, symbol: str, duration: str = '1 Y', bar_size: str = '1 day'):
+        if not self.connected: await self.connect()
+        
+        contract = Stock(symbol, 'SMART', 'USD')
+        await self.ib.qualifyContractsAsync(contract)
+        
+        bars = await self.ib.reqHistoricalDataAsync(
+            contract,
+            endDateTime='',
+            durationStr=duration,
+            barSizeSetting=bar_size,
+            whatToShow='TRADES',
+            useRTH=True
+        )
+        
+        if not bars:
+            return None
+            
+        df = util.df(bars)
+        return df
+
 ib_service = IBService()
